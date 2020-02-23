@@ -1,0 +1,29 @@
+.container{
+    background-color: yellow;
+    display:flex;
+    justify-content: space-between;
+    >div{
+        width:100%;
+        >div{
+            width:100%;
+        }
+    }
+
+    .test{
+        button{
+            background-color: red;
+            cursor: pointer;
+            outline:0;
+            border:0;
+            border:1px solid #9a9a9a;
+            color: #999;
+            
+            &:nth-child(2){
+                background-color: blue;   
+            }
+        }
+
+    }
+}
+
+

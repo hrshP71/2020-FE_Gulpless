@@ -1,0 +1,86 @@
+@import "bootstrap/_grid-variables";
+
+//
+.responsive-xs(@rules)
+{
+  @media (max-width: (@breakPointSM - 1)) { @rules(); }
+}
+//
+.responsive-sm(@rules)
+{
+  @media (min-width: @breakPointSM) and (max-width: (@breakPointMD - 1)) { @rules(); }
+}
+//
+.responsive-md(@rules)
+{
+  @media (min-width: @breakPointMD) and (max-width: (@breakPointLG - 1)) { @rules(); }
+}
+//
+.responsive-lg(@rules)
+{
+  @media (min-width: @breakPointLG) and (max-width: (@breakPointXL - 1)) { @rules(); }
+}
+//
+.responsive-xl(@rules)
+{
+  @media (min-width: @breakPointXL) and (max-width: (@breakPointXXL - 1)) { @rules(); }
+}
+//
+.responsive-xxl(@rules)
+{
+  @media (min-width: @breakPointXXL) { @rules(); }
+}
+
+// 
+.responsive-min-sm(@rules)
+{
+  @media (min-width: @breakPointSM) { @rules(); }
+}
+.responsive-max-sm(@rules)
+{
+  @media (max-width: (@breakPointMD - 1)) { @rules(); }
+}
+
+// 
+.responsive-min-md(@rules)
+{
+  @media (min-width: @breakPointMD) { @rules(); }
+}
+
+.responsive-max-md(@rules)
+{
+  @media (max-width: (@breakPointLG - 1)) { @rules(); }
+}
+
+// 
+.responsive-min-lg(@rules)
+{
+  @media (min-width: @breakPointLG) { @rules(); }
+}
+
+.responsive-max-lg(@rules)
+{
+  @media (max-width: (@breakPointXL - 1)) { @rules(); }
+}
+
+// 
+.responsive-min-xl(@rules)
+{
+  @media (min-width: @breakPointXL) { @rules(); }
+}
+
+.responsive-max-xl(@rules)
+{
+  @media (max-width: (@breakPointXXL - 1)) { @rules(); }
+}
+
+.responsive-min-xxl(@rules)
+{
+  @media (min-width: @breakPointXXL) { @rules(); }
+}
+
+// Alternative Responsive Mixin
+.responsive(@minWidth; @maxWidth; @rules)
+{
+  @media (min-width: @minWidth) and (max-width: @maxWidth) { @rules(); }
+}
